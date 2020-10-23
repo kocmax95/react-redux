@@ -1,11 +1,21 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
+import Form from './Form';
+import List from './List';
+
+
+import store from './store/store';
 
 function App() {
   return (
-    <div>
-      hallo Redux
+    <Provider store={store}>
+      <div>
+        <Form/>
+        <p>Programowanie z samurajem</p>
+        <List/>
     </div>
+    </Provider>
   );
 }
 
